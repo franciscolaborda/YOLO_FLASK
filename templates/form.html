@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Que ves</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+    <script src="{{url_for('static', filename='js/file.js')}}"></script>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div class="formulario">
+        <div class="headline">SUBI UNA IMAGEN</div>
+        <form method="POST" action="/predict" enctype=multipart/form-data>
+
+            <div class="file-upload">
+
+                <input type="file" name="image" id="imageName" onchange="showName()"/>
+
+                <i class="fa fa-arrow-up"></i>
+
+            </div>
+
+        <div class="enviar">
+            <p id="nombre"></p>
+            <button type="submit" value="ENVIAR" class="boton">ENVIAR</button>
+        </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+<footer>
+  <div style="width:32px; margin-left:auto; margin-right:auto;">
+  <a href="https://github.com/franciscolaborda" target="_blank"><img border="0" alt="W3Schools" src="{{url_for('static', filename='img/logo.png')}}" width="32px" height="32px" style="margin-bottom:0px;"></a>
+    </div>
+</footer>
+
+</html>

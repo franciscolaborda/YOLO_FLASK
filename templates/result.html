@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Que ves</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+    <script src="{{url_for('static', filename='js/file.js')}}"></script>
+    <title>Resultado</title>
+</head>
+<body>
+
+<div class="wrapper">
+   <br class="content">
+    <div class="image_wrapper">
+    <img src="data:image/format;base64,{{ data.imagen|safe }}" class="result_image">
+    </div>
+   <table border = 0 style="width:300px; margin-left:auto; margin-right:auto;" >
+      {% if data %}
+         {% for valor in data.preds %}
+            <tr>
+               <th style="color:#ffffff;"> {{ valor }} </th>
+               <!--<td style="color:#ffffff;"> {{ valor }} </td>-->
+            </tr>
+         {% endfor %}
+      {% endif %}
+      </table>
+    <div style="width:300px; margin-left:auto; margin-right:auto;">
+      {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h3 style="color:#ffffff"> {{ message }} </h3>
+
+                {% endfor %}
+
+
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    </br>
+      <a href="/" style="color:rgb(255, 85, 85);">Volver</a>
+    </div>
+</div>
+
+<div>
+
+</body>
+<!--<footer>
+    <div style="width:32px; margin-left:auto; margin-right:auto;">
+        <a href="https://github.com/franciscolaborda" target="_blank"><img border="0" alt="GITHUB" src="{{url_for('static', filename='img/logo.png')}}" width="32px" height="32px" style="margin-bottom:0px;"></a>
+    </div>
+</footer>-->
+
+</html>
+
+
