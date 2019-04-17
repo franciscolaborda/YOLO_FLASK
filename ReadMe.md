@@ -17,4 +17,5 @@ Para arrancar el servidor es necesario ejecutar el archivo ```waitress_server.py
 
 Se puede acceder a la webapp accediendo a `http://localhost:8080`.
 
-
+## Nota
+Incluir el modelo generado en el paso 5 dentro de la carpeta 'model_data'
