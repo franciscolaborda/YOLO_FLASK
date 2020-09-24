@@ -20,5 +20,4 @@ Se puede acceder a la webapp accediendo a `http://localhost:8080`.
 ## Nota
 Incluir el modelo generado en el paso 5 dentro de la carpeta 'model_data'
 
-## Demo
-[*yolo.datakiwi.org*](http://yolo.datakiwi.org/)
+
