@@ -4,7 +4,7 @@ jsonschema==3.0.1
 Keras==2.2.4
 Keras-Applications==1.0.7
 Keras-Preprocessing==1.0.9
-Pillow==5.4.1
+Pillow==8.3.2
 tensorboard==1.13.1
 tensorflow==1.13.1
 tensorflow-estimator==1.13.0
